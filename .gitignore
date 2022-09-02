@@ -1,0 +1,18 @@
+# Base
+*.DS_Store
+*.xcworkspace
+*.idea
+*.xcuserdatad
+*xcschememanagement.plist
+build/
+Build/
+DerivedData/
+xcuserdata/
+xcschemes/
+Index/
+Logs/
+.idea/
+
+# CocoaPods
+Pods
+Podfile.lock

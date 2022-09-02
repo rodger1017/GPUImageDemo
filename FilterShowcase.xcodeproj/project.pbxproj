@@ -20,10 +20,6 @@
 		55A8FBA71F39851500109D93 /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FB9E1F39851500109D93 /* Icon.png */; };
 		55A8FBA81F39851500109D93 /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FB9F1F39851500109D93 /* Icon@2x.png */; };
 		55A8FBA91F39851500109D93 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBA01F39851500109D93 /* iTunesArtwork.png */; };
-		55A8FBAA1F39851500109D93 /* lookup_amatorka.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBA11F39851500109D93 /* lookup_amatorka.png */; };
-		55A8FBAB1F39851500109D93 /* lookup_miss_etikate.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBA21F39851500109D93 /* lookup_miss_etikate.png */; };
-		55A8FBAC1F39851500109D93 /* lookup_soft_elegance_1.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBA31F39851500109D93 /* lookup_soft_elegance_1.png */; };
-		55A8FBAD1F39851500109D93 /* lookup_soft_elegance_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBA41F39851500109D93 /* lookup_soft_elegance_2.png */; };
 		55A8FBAF1F39854600109D93 /* WID-small.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 55A8FBAE1F39854600109D93 /* WID-small.jpg */; };
 		6BF3ED5715B5C2BF002F9E9E /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6BF3ED5615B5C2BF002F9E9E /* CoreImage.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		83AE9FD41540F3CC00F7FC13 /* mask.png in Resources */ = {isa = PBXBuildFile; fileRef = 83AE9FD31540F3CC00F7FC13 /* mask.png */; };
@@ -230,7 +226,6 @@
 				BC982AFE14F046AC0001FF6F /* Sources */,
 				BC982AFF14F046AC0001FF6F /* Frameworks */,
 				BC982B0014F046AC0001FF6F /* Resources */,
-				C6FD19BE7AF01875CC03EB22 /* [CP] Embed Pods Frameworks */,
 				14025D30A001DEBE952EB7B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -253,7 +248,7 @@
 				ORGANIZATIONNAME = "Cell Phone";
 				TargetAttributes = {
 					BC982B0114F046AC0001FF6F = {
-						DevelopmentTeam = 3263JNZJ56;
+						DevelopmentTeam = 824Y7584HC;
 					};
 				};
 			};
@@ -262,6 +257,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = BC982AF714F046AC0001FF6F;
@@ -284,20 +280,16 @@
 				55A8FBA51F39851500109D93 /* Icon-72.png in Resources */,
 				BC982C4114F1F6C80001FF6F /* CustomFilter.fsh in Resources */,
 				BC982B1114F046AC0001FF6F /* InfoPlist.strings in Resources */,
-				55A8FBAC1F39851500109D93 /* lookup_soft_elegance_1.png in Resources */,
 				55A8FBAF1F39854600109D93 /* WID-small.jpg in Resources */,
 				BC982B3714F04B3A0001FF6F /* ShowcaseFilterViewController.xib in Resources */,
 				0D69488E1501F71900206FF8 /* SampleConfiguration.plist in Resources */,
 				83AE9FD41540F3CC00F7FC13 /* mask.png in Resources */,
 				55A8FBA81F39851500109D93 /* Icon@2x.png in Resources */,
 				55A8FBA91F39851500109D93 /* iTunesArtwork.png in Resources */,
-				55A8FBAB1F39851500109D93 /* lookup_miss_etikate.png in Resources */,
 				F2F3361E156585C400B0FBB8 /* voroni_points2.png in Resources */,
-				55A8FBAD1F39851500109D93 /* lookup_soft_elegance_2.png in Resources */,
 				F2F336271565906000B0FBB8 /* dotletterstiles.png in Resources */,
 				F2F33629156591CA00B0FBB8 /* curvies.png in Resources */,
 				F2F3362B156591DB00B0FBB8 /* squares.png in Resources */,
-				55A8FBAA1F39851500109D93 /* lookup_amatorka.png in Resources */,
 				55A8FBA61F39851500109D93 /* Icon-72@2x.png in Resources */,
 				556E616D1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib in Resources */,
 				556E61731F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib in Resources */,
@@ -315,13 +307,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-FilterShowcase-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		14025D30A001DEBE952EB7B7 /* [CP] Copy Pods Resources */ = {
@@ -330,28 +325,24 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-FilterShowcase/Pods-FilterShowcase-resources.sh",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
+				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FilterShowcase/Pods-FilterShowcase-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C6FD19BE7AF01875CC03EB22 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FilterShowcase/Pods-FilterShowcase-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-FilterShowcase/Pods-FilterShowcase-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -470,11 +461,12 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3263JNZJ56;
+				DEVELOPMENT_TEAM = 824Y7584HC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilterShowcase/FilterShowcase-Prefix.pch";
 				INFOPLIST_FILE = "FilterShowcase/FilterShowcase-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsetlakesoftware.FilterShowcases;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
@@ -487,13 +479,15 @@
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				DEVELOPMENT_TEAM = 3263JNZJ56;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilterShowcase/FilterShowcase-Prefix.pch";
 				INFOPLIST_FILE = "FilterShowcase/FilterShowcase-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

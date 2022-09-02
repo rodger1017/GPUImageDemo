@@ -20,7 +20,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.view.backgroundColor = [UIColor blackColor];
     self.title = @"Filter List";
 }
 
@@ -63,7 +63,7 @@
 	if (cell == nil) 
 	{
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FilterCell"];
-		cell.textLabel.textColor = [UIColor blackColor];
+		cell.textLabel.textColor = [UIColor lightGrayColor];
 	}		
 	
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
