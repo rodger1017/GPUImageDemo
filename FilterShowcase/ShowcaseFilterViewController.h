@@ -124,8 +124,7 @@ typedef enum {
 } GPUImageShowcaseFilterType; 
 
 
-@interface ShowcaseFilterViewController : UIViewController <GPUImageVideoCameraDelegate>
-{
+@interface ShowcaseFilterViewController : UIViewController <GPUImageVideoCameraDelegate> {
     GPUImageVideoCamera *videoCamera;
     GPUImageOutput<GPUImageInput> *filter;
     GPUImagePicture *sourcePicture;
@@ -143,7 +142,6 @@ typedef enum {
     __unsafe_unretained UISlider *_filterSettingsSlider;
     BOOL faceThinking;
     
-    GPUImageView *gpuImageView;
     GPUImagePicture *gpuImagePicture;
 }
 

@@ -10,7 +10,6 @@
 		0D69488E1501F71900206FF8 /* SampleConfiguration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0D69488D1501F71900206FF8 /* SampleConfiguration.plist */; };
 		4A60F26CB16815C9CFBE7EE2 /* libPods-FilterShowcase.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4728A8EAA6E1474CDE80681 /* libPods-FilterShowcase.a */; };
 		556E616C1F31AEAA00E3C5C8 /* ShowcaseMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556E616A1F31AEAA00E3C5C8 /* ShowcaseMainViewController.m */; };
-		556E616D1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556E616B1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib */; };
 		556E61721F31C1FF00E3C5C8 /* ShowcasePictureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 556E61701F31C1FF00E3C5C8 /* ShowcasePictureViewController.m */; };
 		556E61731F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 556E61711F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib */; };
 		556E61791F3455AC00E3C5C8 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 556E61781F3455AC00E3C5C8 /* test.jpg */; };
@@ -50,7 +49,6 @@
 		0D69488D1501F71900206FF8 /* SampleConfiguration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SampleConfiguration.plist; sourceTree = "<group>"; };
 		556E61691F31AEAA00E3C5C8 /* ShowcaseMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowcaseMainViewController.h; sourceTree = "<group>"; };
 		556E616A1F31AEAA00E3C5C8 /* ShowcaseMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowcaseMainViewController.m; sourceTree = "<group>"; };
-		556E616B1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowcaseMainViewController.xib; sourceTree = "<group>"; };
 		556E616F1F31C1FF00E3C5C8 /* ShowcasePictureViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShowcasePictureViewController.h; sourceTree = "<group>"; };
 		556E61701F31C1FF00E3C5C8 /* ShowcasePictureViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShowcasePictureViewController.m; sourceTree = "<group>"; };
 		556E61711F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShowcasePictureViewController.xib; sourceTree = "<group>"; };
@@ -171,7 +169,6 @@
 				556E61781F3455AC00E3C5C8 /* test.jpg */,
 				556E61691F31AEAA00E3C5C8 /* ShowcaseMainViewController.h */,
 				556E616A1F31AEAA00E3C5C8 /* ShowcaseMainViewController.m */,
-				556E616B1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib */,
 				BC982B1514F046AC0001FF6F /* ShowcaseAppDelegate.h */,
 				BC982B1614F046AC0001FF6F /* ShowcaseAppDelegate.m */,
 				BC982B3D14F05DC10001FF6F /* ShowcaseFilterListController.h */,
@@ -179,11 +176,11 @@
 				BC982B3514F04B3A0001FF6F /* ShowcaseFilterViewController.xib */,
 				BC982B3314F04B3A0001FF6F /* ShowcaseFilterViewController.h */,
 				BC982B3414F04B3A0001FF6F /* ShowcaseFilterViewController.m */,
-				BC982C4014F1F6C80001FF6F /* CustomFilter.fsh */,
-				BC982B0D14F046AC0001FF6F /* Supporting Files */,
 				556E616F1F31C1FF00E3C5C8 /* ShowcasePictureViewController.h */,
 				556E61701F31C1FF00E3C5C8 /* ShowcasePictureViewController.m */,
 				556E61711F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib */,
+				BC982C4014F1F6C80001FF6F /* CustomFilter.fsh */,
+				BC982B0D14F046AC0001FF6F /* Supporting Files */,
 			);
 			path = FilterShowcase;
 			sourceTree = "<group>";
@@ -244,7 +241,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Showcase;
-				LastUpgradeCheck = 0610;
+				LastUpgradeCheck = 1420;
 				ORGANIZATIONNAME = "Cell Phone";
 				TargetAttributes = {
 					BC982B0114F046AC0001FF6F = {
@@ -291,7 +288,6 @@
 				F2F33629156591CA00B0FBB8 /* curvies.png in Resources */,
 				F2F3362B156591DB00B0FBB8 /* squares.png in Resources */,
 				55A8FBA61F39851500109D93 /* Icon-72@2x.png in Resources */,
-				556E616D1F31AEAA00E3C5C8 /* ShowcaseMainViewController.xib in Resources */,
 				556E61731F31C1FF00E3C5C8 /* ShowcasePictureViewController.xib in Resources */,
 				E5530A36180FD1D500597F98 /* Default-568h@2x.png in Resources */,
 				556E61791F3455AC00E3C5C8 /* test.jpg in Resources */,
@@ -325,20 +321,9 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-FilterShowcase/Pods-FilterShowcase-resources.sh",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_amatorka.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_miss_etikate.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_1.png",
-				"${PODS_ROOT}/GPUImage/framework/Resources/lookup_soft_elegance_2.png",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_amatorka.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_miss_etikate.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_1.png",
-				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/lookup_soft_elegance_2.png",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -379,20 +364,34 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -410,7 +409,7 @@
 					../../../framework/Source,
 					../../../framework/Source/iOS,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -422,12 +421,24 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -435,6 +446,7 @@
 				ENABLE_BITCODE = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -446,7 +458,7 @@
 					../../../framework/Source,
 					../../../framework/Source/iOS,
 				);
-				IPHONEOS_DEPLOYMENT_TARGET = 4.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				OTHER_LDFLAGS = "-ObjC";
 				SDKROOT = iphoneos;
@@ -465,7 +477,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilterShowcase/FilterShowcase-Prefix.pch";
 				INFOPLIST_FILE = "FilterShowcase/FilterShowcase-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.sunsetlakesoftware.FilterShowcases;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -477,14 +489,14 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 0584AB8B4BA2BF8F849FE8F6 /* Pods-FilterShowcase.release.xcconfig */;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CODE_SIGN_STYLE = Manual;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 824Y7584HC;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FilterShowcase/FilterShowcase-Prefix.pch";
 				INFOPLIST_FILE = "FilterShowcase/FilterShowcase-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.sunsetlakesoftware.FilterShowcases;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";

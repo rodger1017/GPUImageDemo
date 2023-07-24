@@ -9,39 +9,15 @@
 #import <UIKit/UIKit.h>
 #import "ShowcaseFilterViewController.h"
 
-@interface ShowcasePictureViewController : UIViewController
-{
-   // GPUImageVideoCamera *videoCamera;
-    GPUImageOutput<GPUImageInput> *filter;
-    GPUImagePicture *sourcePicture;
-    GPUImageShowcaseFilterType filterType;
-    GPUImageUIElement *uiElementInput;
-    
-    GPUImageFilterPipeline *pipeline;
-    UIView *faceView;
-    
-    CIDetector *faceDetector;
-    
-    //IBOutlet UISwitch *facesSwitch;
-    //IBOutlet UILabel *facesLabel;
-    __unsafe_unretained UISlider *_filterSettingsSlider;
-    BOOL faceThinking;
-    
-    GPUImagePicture *gpuImagePicture;
-}
+@interface ShowcasePictureViewController : UIViewController<GPUImageVideoCameraDelegate>
 
-@property(readwrite, unsafe_unretained, nonatomic) IBOutlet UISlider *filterSettingsSlider;
-@property(nonatomic,retain) CIDetector*faceDetector;
-@property(nonatomic,strong)UIImage *inputImage;
 // Initialization and teardown
-- (id)initWithFilterType:(GPUImageShowcaseFilterType)newFilterType;
-- (void)setupFilter;
+- (id)initWithFilterType:(GPUImageShowcaseFilterType)filterType inputImage:(UIImage *)inputImage;
 - (void)willOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer;
-// Filter adjustments
 - (IBAction)updateFilterFromSlider:(id)sender;
 - (void)GPUVCWillOutputFeatures:(NSArray*)featureArray forClap:(CGRect)clap
                  andOrientation:(UIDeviceOrientation)curDeviceOrientation;
--(IBAction)facesSwitched:(id)sender;
+- (IBAction)facesSwitched:(id)sender;
 
 
 @end

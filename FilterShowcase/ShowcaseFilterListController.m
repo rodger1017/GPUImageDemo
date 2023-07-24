@@ -8,68 +8,45 @@
 
 @implementation ShowcaseFilterListController
 
-- (id)initWithStyle:(UITableViewStyle)style
-{
-    self = [super initWithStyle:style];
-    if (self) {
+- (id)initWithStyle:(UITableViewStyle)style {
+    if (self = [super initWithStyle:style]) {
         // Custom initialization
     }
+    
     return self;
 }
 
-- (void)viewDidLoad
-{
+- (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor blackColor];
     self.title = @"Filter List";
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    // Release any retained subviews of the main view.
-    // e.g. self.myOutlet = nil;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
-}
-
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Disable the last filter (Core Image face detection) if running on iOS 4.0
-    if ([GPUImageContext supportsFastTextureUpload])
-    {
+    if ([GPUImageContext supportsFastTextureUpload]) {
         return GPUIMAGE_NUMFILTERS;
-    }
-    else
-    {
+    } else {
         return (GPUIMAGE_NUMFILTERS - 1);
     }
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
 	NSInteger index = [indexPath row];
 	UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"FilterCell"];
-	if (cell == nil) 
-	{
+	if (cell == nil)  {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"FilterCell"];
-		cell.textLabel.textColor = [UIColor lightGrayColor];
-	}		
-	
+		cell.textLabel.textColor = [UIColor darkGrayColor];
+	}
 	cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-	switch (index)
-	{
+	switch (index) {
 		case GPUIMAGE_SATURATION: cell.textLabel.text = @"Saturation"; break;
 		case GPUIMAGE_CONTRAST: cell.textLabel.text = @"Contrast"; break;
 		case GPUIMAGE_BRIGHTNESS: cell.textLabel.text = @"Brightness"; break;
@@ -193,59 +170,18 @@
     return cell;
 }
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
-
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    }   
-    else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
 #pragma mark - Table view delegate
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(_inputImage) {
-        ShowcasePictureViewController *pictureViewController = [[ShowcasePictureViewController alloc] initWithFilterType:(GPUImageShowcaseFilterType)indexPath.row];
-        [pictureViewController setInputImage:_inputImage];
-        [self.navigationController pushViewController:pictureViewController animated:YES];
-
-    }else {
-        ShowcaseFilterViewController *filterViewController = [[ShowcaseFilterViewController alloc] initWithFilterType:(GPUImageShowcaseFilterType)indexPath.row];
-        [self.navigationController pushViewController:filterViewController animated:YES];
-    }
-    
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    ShowcasePictureViewController *pictureViewController = [[ShowcasePictureViewController alloc] initWithFilterType:(GPUImageShowcaseFilterType)indexPath.row inputImage:self.inputImage];
+    [self.navigationController pushViewController:pictureViewController animated:YES];
+//    if(self.inputImage) {
+//        ShowcasePictureViewController *pictureViewController = [[ShowcasePictureViewController alloc] initWithFilterType:(GPUImageShowcaseFilterType)indexPath.row inputImage:self.inputImage];
+//        [self.navigationController pushViewController:pictureViewController animated:YES];
+//    } else {
+//        ShowcaseFilterViewController *filterViewController = [[ShowcaseFilterViewController alloc] initWithFilterType:(GPUImageShowcaseFilterType)indexPath.row];
+//        [self.navigationController pushViewController:filterViewController animated:YES];
+//    }
 }
 
 @end

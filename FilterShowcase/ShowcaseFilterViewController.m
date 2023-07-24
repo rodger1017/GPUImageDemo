@@ -57,19 +57,8 @@
     [videoCamera startCameraCapture];
 }
 
-- (void)viewDidUnload
-{
-    [super viewDidUnload];
-    
-}
-
 - (void)setIsPictureSource:(BOOL)isPictureSource {
     _isPictureSource = isPictureSource;
-}
-
-- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
-{
-    return (interfaceOrientation == UIInterfaceOrientationPortrait);
 }
 
 - (void)setupFilter;
@@ -1430,7 +1419,7 @@
             UILabel *timeLabel = [[UILabel alloc] initWithFrame:CGRectMake(0.0, 0.0, 240.0f, 320.0f)];
             timeLabel.font = [UIFont systemFontOfSize:17.0f];
             timeLabel.text = @"Time: 0.0 s";
-            timeLabel.textAlignment = UITextAlignmentCenter;
+            timeLabel.textAlignment = NSTextAlignmentCenter;
             timeLabel.backgroundColor = [UIColor clearColor];
             timeLabel.textColor = [UIColor whiteColor];
 
@@ -1783,7 +1772,6 @@
             faceView = nil;
         }
         
-    
         for ( CIFaceFeature *faceFeature in featureArray) {
             
             // find the correct position for the square layer within the previewLayer

@@ -10,9 +10,6 @@
 
 @class ShowcaseFilterListController;
 
-@interface ShowcaseMainViewController : UIViewController <UINavigationControllerDelegate,UIImagePickerControllerDelegate>{
-    ShowcaseFilterListController *filterListController;
-
-}
+@interface ShowcaseMainViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @end
